@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "7c185b28-a9e1-4020-aff6-ab772fe8070a",
+		"name": "DesafioDock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "12739693"
+	},
+	"item": [
+		{
+			"name": "Criar conta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"pessoa\": {\"idPessoa\": 2},\r\n\t\"limiteSaqueDiario\": 200.00,\r\n\t\"tipoConta\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/contas/criar"
+			},
+			"response": []
+		},
+		{
+			"name": "Deposito",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"saldo\": 1000.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/contas/1/depositar"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta saldo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"saldo\": 500.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/contas/1/saldo"
+			},
+			"response": []
+		},
+		{
+			"name": "Sacar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"saldo\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/contas/1/sacar"
+			},
+			"response": []
+		},
+		{
+			"name": "Consulta Transacoes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"saldo\": 500.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/contas/1/transacoes"
+			},
+			"response": []
+		},
+		{
+			"name": "Bloquear",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"saldo\": 200.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/contas/1/sacar"
+			},
+			"response": []
+		},
+		{
+			"name": "Extrato por data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"saldo\": 500.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "localhost:8080/extratos"
+			},
+			"response": []
+		}
+	]
+}
