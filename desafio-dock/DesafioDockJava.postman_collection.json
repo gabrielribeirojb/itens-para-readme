@@ -13,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"pessoa\": {\"idPessoa\": 2},\r\n\t\"limiteSaqueDiario\": 200.00,\r\n\t\"tipoConta\": 1\r\n}",
+					"raw": "{\r\n\t\"pessoa\": {\"idPessoa\": 1},\r\n\t\"limiteSaqueDiario\": 200.00,\r\n\t\"tipoConta\": 2\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -31,7 +31,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"saldo\": 1000.00\r\n}",
+					"raw": "{\r\n\t\"saldo\": 500.00\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -52,7 +52,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"saldo\": 500.00\r\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -70,7 +70,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"saldo\": 200.00\r\n}",
+					"raw": "{\r\n\t\"saldo\": 200.0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -116,7 +116,7 @@
 						}
 					}
 				},
-				"url": "localhost:8080/contas/1/sacar"
+				"url": "localhost:8080/contas/1/bloquear"
 			},
 			"response": []
 		},
@@ -137,7 +137,26 @@
 						}
 					}
 				},
-				"url": "localhost:8080/extratos"
+				"url": {
+					"raw": "localhost:8080/extratos?dataMin=2022-10-17&dataMax=2022-12-31",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"extratos"
+					],
+					"query": [
+						{
+							"key": "dataMin",
+							"value": "2022-10-17"
+						},
+						{
+							"key": "dataMax",
+							"value": "2022-12-31"
+						}
+					]
+				}
 			},
 			"response": []
 		}
